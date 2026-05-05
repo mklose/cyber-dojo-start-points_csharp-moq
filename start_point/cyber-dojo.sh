@@ -25,8 +25,9 @@ trap cyber_dojo_exit EXIT SIGTERM
 ln -s ~/.nuget/packages/moq/4.20.72/lib/net6.0/Moq.dll Moq.dll
 ln -s ~/.nuget/packages/castle.core/5.1.1/lib/net6.0/Castle.Core.dll Castle.Core.dll
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll nunit.framework.dll
-#use legacy asserts eg: AreEqual(42, 42)
-# needs on top of file: using static NUnit.Framework.Legacy.ClassicAssert;
+
+#in order to use legacy asserts eg: AreEqual(42, 42);
+# add on top of the .cs file: using static NUnit.Framework.Legacy.ClassicAssert;
 ln -s ~/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.legacy.dll nunit.framework.legacy.dll 
 
 time (dotnet /usr/share/dotnet/sdk/10.0.103/Roslyn/bincore/csc.dll \
